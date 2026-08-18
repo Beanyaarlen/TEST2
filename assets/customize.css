@@ -1,0 +1,304 @@
+/*
+===============================================================================
+PANEL CUSTOMISASI ONDA PRINTING
+===============================================================================
+
+EDIT FILE INI SAJA.
+Jangan mengubah assets/style.css karena file tersebut berisi CSS inti.
+
+CARA MENGUBAH:
+1. Cari bagian [EDIT] yang sesuai.
+2. Ubah angka sebelum px pada bagian :root di bawah.
+3. Simpan file, lalu refresh browser dengan Ctrl + F5.
+
+CONTOH:
+--card-number-size: 18px;  menjadi  --card-number-size: 24px;
+
+DAFTAR BAGIAN:
+[EDIT 01] Header dan navbar
+[EDIT 02] Hero halaman utama
+[EDIT 03] Judul halaman dan subtitle
+[EDIT 04] Heading setiap section
+[EDIT 05] Kartu layanan + ANGKA 01, 02, 03
+[EDIT 06] Portofolio
+[EDIT 07] Detail proyek dan detail keahlian
+[EDIT 08] Contact Us
+[EDIT 09] Footer
+[EDIT 10] Ukuran khusus HP
+===============================================================================
+*/
+
+:root {
+  /* [EDIT 01] HEADER DAN NAVBAR */
+  --navbar-font-size: 13px;
+  --portfolio-label-size: 10px;
+  --logo-caption-size: 8px;
+
+  /* [EDIT 02] HERO HALAMAN UTAMA */
+  --home-title-min: 48px;
+  --home-title-max: 68px;
+  --home-subtitle-size: 16px;
+  --button-font-size: 13px;
+
+  /* [EDIT 03] JUDUL HALAMAN DAN SUBTITLE
+     Berlaku untuk: Tentang, Keahlian, Portofolio, Contact Us */
+  --page-title-min: 44px;
+  --page-title-max: 70px;
+  --page-subtitle-size: 16px;
+  --small-label-size: 10px;
+
+  /* [EDIT 04] HEADING SETIAP SECTION */
+  --section-title-min: 34px;
+  --section-title-max: 50px;
+  --section-subtitle-size: 15px;
+
+  /* [EDIT 05] KARTU LAYANAN + ANGKA 01, 02, 03
+     UBAH --card-number-size untuk memperbesar angka. */
+  --card-number-size: 18px;
+  --card-number-weight: 800;
+  --card-icon-size: 40px;
+  --card-title-size: 24px;
+  --card-description-size: 14px;
+
+  /* [EDIT 06] PORTOFOLIO */
+  --portfolio-category-size: 10px;
+  --portfolio-title-size: 25px;
+  --portfolio-description-size: 13px;
+  --filter-font-size: 12px;
+
+  /* [EDIT 07] DETAIL PROYEK DAN DETAIL KEAHLIAN */
+  --detail-title-min: 46px;
+  --detail-title-max: 70px;
+  --detail-section-title-min: 34px;
+  --detail-section-title-max: 48px;
+  --detail-body-size: 15px;
+  --detail-label-size: 10px;
+
+  /* [EDIT 08] CONTACT US */
+  --contact-title-min: 38px;
+  --contact-title-max: 54px;
+  --contact-body-size: 15px;
+  --contact-label-size: 10px;
+
+  /* [EDIT 09] FOOTER */
+  --footer-title-size: 10px;
+  --footer-link-size: 13px;
+  --footer-body-size: 13px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* [EDIT 01] HEADER DAN NAVBAR                                                 */
+/* -------------------------------------------------------------------------- */
+.portfolio-nav a {
+  font-size: var(--navbar-font-size) !important;
+}
+
+.portfolio-edition {
+  font-size: var(--portfolio-label-size) !important;
+}
+
+.pro-logo small {
+  font-size: var(--logo-caption-size) !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/* [EDIT 02] HERO HALAMAN UTAMA                                               */
+/* -------------------------------------------------------------------------- */
+.enterprise-copy h1 {
+  font-size: clamp(
+    var(--home-title-min),
+    4.6vw,
+    var(--home-title-max)
+  ) !important;
+}
+
+.enterprise-copy > p {
+  font-size: var(--home-subtitle-size) !important;
+}
+
+.button,
+.text-link,
+.pro-button {
+  font-size: var(--button-font-size) !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/* [EDIT 03] JUDUL HALAMAN DAN SUBTITLE                                       */
+/* -------------------------------------------------------------------------- */
+.page-hero h1 {
+  font-size: clamp(
+    var(--page-title-min),
+    5.35vw,
+    var(--page-title-max)
+  ) !important;
+}
+
+.page-hero > p {
+  font-size: var(--page-subtitle-size) !important;
+}
+
+.eyebrow {
+  font-size: var(--small-label-size) !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/* [EDIT 04] HEADING SETIAP SECTION                                           */
+/* -------------------------------------------------------------------------- */
+.section-head h2,
+.quality h2,
+.story h2 {
+  font-size: clamp(
+    var(--section-title-min),
+    3.8vw,
+    var(--section-title-max)
+  ) !important;
+}
+
+.section-head > p {
+  font-size: var(--section-subtitle-size) !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/* [EDIT 05] KARTU LAYANAN + ANGKA 01, 02, 03                                 */
+/* -------------------------------------------------------------------------- */
+
+/* Angka pada tiga kartu di halaman Beranda */
+.service-grid article > span {
+  font-size: var(--card-number-size) !important;
+  font-weight: var(--card-number-weight) !important;
+}
+
+/* Angka pada enam kartu di halaman Keahlian */
+.services-list article > div > span {
+  font-size: var(--card-number-size) !important;
+  font-weight: var(--card-number-weight) !important;
+}
+
+/* Angka pada daftar link penjelasan Keahlian */
+.expertise-index a > span {
+  font-size: var(--card-number-size) !important;
+  font-weight: var(--card-number-weight) !important;
+}
+
+.service-grid article > b,
+.services-list article > div > b {
+  font-size: var(--card-icon-size) !important;
+}
+
+.service-grid h3,
+.services-list h2 {
+  font-size: var(--card-title-size) !important;
+}
+
+.service-grid p,
+.services-list p {
+  font-size: var(--card-description-size) !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/* [EDIT 06] PORTOFOLIO                                                       */
+/* -------------------------------------------------------------------------- */
+.home-project > small,
+.project-card > small {
+  font-size: var(--portfolio-category-size) !important;
+}
+
+.home-project h3,
+.project-card h2 {
+  font-size: var(--portfolio-title-size) !important;
+}
+
+.project-card p {
+  font-size: var(--portfolio-description-size) !important;
+}
+
+.filters button {
+  font-size: var(--filter-font-size) !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/* [EDIT 07] DETAIL PROYEK DAN DETAIL KEAHLIAN                                */
+/* -------------------------------------------------------------------------- */
+.case-hero h1 {
+  font-size: clamp(
+    var(--detail-title-min),
+    5.3vw,
+    var(--detail-title-max)
+  ) !important;
+}
+
+.case-story h2 {
+  font-size: clamp(
+    var(--detail-section-title-min),
+    3.8vw,
+    var(--detail-section-title-max)
+  ) !important;
+}
+
+.case-hero-copy > p:not(.case-kicker),
+.case-story p {
+  font-size: var(--detail-body-size) !important;
+}
+
+.case-kicker,
+.case-meta span,
+.case-story h3,
+.case-next small {
+  font-size: var(--detail-label-size) !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/* [EDIT 08] CONTACT US                                                       */
+/* -------------------------------------------------------------------------- */
+.contact-us-copy h2 {
+  font-size: clamp(
+    var(--contact-title-min),
+    4vw,
+    var(--contact-title-max)
+  ) !important;
+}
+
+.contact-lead,
+.contact-details p {
+  font-size: var(--contact-body-size) !important;
+}
+
+.contact-action span,
+.contact-details small,
+.location-panel-head small {
+  font-size: var(--contact-label-size) !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/* [EDIT 09] FOOTER                                                           */
+/* -------------------------------------------------------------------------- */
+.footer h3 {
+  font-size: var(--footer-title-size) !important;
+}
+
+.footer-grid > div > a:not(.logo) {
+  font-size: var(--footer-link-size) !important;
+}
+
+.footer p {
+  font-size: var(--footer-body-size) !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/* [EDIT 10] UKURAN KHUSUS HP                                                 */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 600px) {
+  :root {
+    --home-title-min: 40px;
+    --home-title-max: 50px;
+    --page-title-min: 38px;
+    --page-title-max: 44px;
+    --section-title-min: 32px;
+    --section-title-max: 34px;
+    --detail-title-min: 40px;
+    --detail-title-max: 42px;
+    --card-number-size: 16px;
+    --card-title-size: 22px;
+    --portfolio-title-size: 22px;
+  }
+}

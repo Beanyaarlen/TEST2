@@ -13,8 +13,17 @@ Isi folder:
 - project-*.html   : enam halaman studi kasus karya
 - expertise-*.html : enam halaman penjelasan lengkap keahlian
 - contact.html     : halaman kontak
-- assets/style.css : seluruh tampilan website
+- assets/style.css : CSS inti website (tidak perlu diubah)
+- assets/customize.css : panel pengaturan font dan ukuran yang aman diubah
 - assets/script.js : menu mobile dan filter portofolio
+
+CARA MENGUBAH UKURAN FONT
+Buka assets/customize.css. Semua pengaturan diberi nomor [EDIT 01] sampai
+[EDIT 10] sesuai bagian website yang dipengaruhi.
+
+Untuk membesarkan angka 01, 02, dan 03 pada kartu Keahlian, cari [EDIT 05]
+lalu ubah --card-number-size: 18px; menjadi, misalnya, 22px.
+Simpan file lalu tekan Ctrl + F5 di browser agar CSS lama tidak tersimpan.
 
 CARA MEMBUKA
 Klik dua kali index.html. Website dapat berjalan langsung tanpa instalasi.
