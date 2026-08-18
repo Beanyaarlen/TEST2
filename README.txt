@@ -24,7 +24,9 @@ Unggah seluruh isi folder ini ke public_html, htdocs, atau folder utama hosting.
 Jangan mengubah susunan folder assets.
 
 CATATAN
-- Nama, alamat, telepon, statistik, dan karya masih merupakan contoh.
+- Statistik dan karya pada template masih merupakan contoh yang dapat dikustomisasi.
+- Halaman Contact Us memakai alamat dan telepon publik Onda Printing di Jl. Buni No. 45,
+  Mangga Besar, Jakarta Barat, serta Google Maps interaktif dan petunjuk arah.
 - Halaman kontak hanya berisi informasi perusahaan dan tidak memiliki form pemesanan.
 - Setiap kartu portofolio membuka studi kasus dengan tantangan, pendekatan, hasil,
   lingkup pekerjaan, serta navigasi proyek sebelumnya dan berikutnya.
