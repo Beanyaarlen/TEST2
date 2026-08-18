@@ -600,7 +600,7 @@ h1 {
 }
 
 .service-grid article > span {
-  font: 700 9px monospace;
+  font: 700 20px monospace;
   color: #839093;
 }
 
@@ -4415,7 +4415,7 @@ body {
 
 .service-grid article > span {
   color: #65767e;
-  font-size: 16px;
+  font-size: 30px;
   font-weight: 800;
 }
 
