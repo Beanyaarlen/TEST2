@@ -18,8 +18,12 @@ Isi folder:
 - assets/script.js : menu mobile dan filter portofolio
 
 CARA MENGUBAH UKURAN FONT
-Buka assets/customize.css. Semua pengaturan diberi nomor [EDIT 01] sampai
+Buka assets/customize.css. Semua pengaturan diberi nomor [EDIT 00] sampai
 [EDIT 10] sesuai bagian website yang dipengaruhi.
+
+Untuk menjaga ukuran tetap konsisten, gunakan lima variabel utama di [EDIT 00]:
+label, teks kecil, teks isi, teks pembuka, dan navbar. Perubahan pada bagian ini
+akan diterapkan ke seluruh halaman secara bersamaan.
 
 Untuk membesarkan angka 01, 02, dan 03 pada kartu Keahlian, cari [EDIT 05]
 lalu ubah --card-number-size: 18px; menjadi, misalnya, 22px.

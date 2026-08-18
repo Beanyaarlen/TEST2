@@ -15,6 +15,7 @@ CONTOH:
 --card-number-size: 18px;  menjadi  --card-number-size: 24px;
 
 DAFTAR BAGIAN:
+[EDIT 00] Skala font global (ubah ini untuk konsistensi seluruh website)
 [EDIT 01] Header dan navbar
 [EDIT 02] Hero halaman utama
 [EDIT 03] Judul halaman dan subtitle
@@ -29,28 +30,36 @@ DAFTAR BAGIAN:
 */
 
 :root {
+  /* [EDIT 00] SKALA FONT GLOBAL
+     Lima ukuran ini menjadi acuan utama di seluruh halaman. */
+  --type-label-size: 12px;
+  --type-small-size: 14px;
+  --type-body-size: 16px;
+  --type-lead-size: 17px;
+  --type-nav-size: 14px;
+
   /* [EDIT 01] HEADER DAN NAVBAR */
-  --navbar-font-size: 13px;
-  --portfolio-label-size: 10px;
-  --logo-caption-size: 8px;
+  --navbar-font-size: var(--type-nav-size);
+  --portfolio-label-size: var(--type-label-size);
+  --logo-caption-size: 9px;
 
   /* [EDIT 02] HERO HALAMAN UTAMA */
   --home-title-min: 48px;
   --home-title-max: 68px;
-  --home-subtitle-size: 16px;
-  --button-font-size: 13px;
+  --home-subtitle-size: var(--type-lead-size);
+  --button-font-size: var(--type-nav-size);
 
   /* [EDIT 03] JUDUL HALAMAN DAN SUBTITLE
      Berlaku untuk: Tentang, Keahlian, Portofolio, Contact Us */
   --page-title-min: 44px;
   --page-title-max: 70px;
-  --page-subtitle-size: 16px;
-  --small-label-size: 10px;
+  --page-subtitle-size: var(--type-lead-size);
+  --small-label-size: var(--type-label-size);
 
   /* [EDIT 04] HEADING SETIAP SECTION */
   --section-title-min: 34px;
   --section-title-max: 50px;
-  --section-subtitle-size: 15px;
+  --section-subtitle-size: var(--type-body-size);
 
   /* [EDIT 05] KARTU LAYANAN + ANGKA 01, 02, 03
      UBAH --card-number-size untuk memperbesar angka. */
@@ -58,32 +67,33 @@ DAFTAR BAGIAN:
   --card-number-weight: 800;
   --card-icon-size: 40px;
   --card-title-size: 24px;
-  --card-description-size: 14px;
+  --card-description-size: 15px;
 
   /* [EDIT 06] PORTOFOLIO */
-  --portfolio-category-size: 10px;
+  --portfolio-category-size: var(--type-label-size);
   --portfolio-title-size: 25px;
-  --portfolio-description-size: 13px;
-  --filter-font-size: 12px;
+  --portfolio-description-size: 15px;
+  --filter-font-size: var(--type-small-size);
 
   /* [EDIT 07] DETAIL PROYEK DAN DETAIL KEAHLIAN */
   --detail-title-min: 46px;
   --detail-title-max: 70px;
   --detail-section-title-min: 34px;
   --detail-section-title-max: 48px;
-  --detail-body-size: 15px;
-  --detail-label-size: 10px;
+  --detail-body-size: var(--type-body-size);
+  --detail-lead-size: var(--type-lead-size);
+  --detail-label-size: var(--type-label-size);
 
   /* [EDIT 08] CONTACT US */
   --contact-title-min: 38px;
   --contact-title-max: 54px;
-  --contact-body-size: 15px;
-  --contact-label-size: 10px;
+  --contact-body-size: var(--type-body-size);
+  --contact-label-size: var(--type-label-size);
 
   /* [EDIT 09] FOOTER */
-  --footer-title-size: 10px;
-  --footer-link-size: 13px;
-  --footer-body-size: 13px;
+  --footer-title-size: var(--type-label-size);
+  --footer-link-size: var(--type-small-size);
+  --footer-body-size: var(--type-small-size);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -141,6 +151,11 @@ DAFTAR BAGIAN:
   font-size: var(--small-label-size) !important;
 }
 
+.number-band span {
+  font-size: var(--small-label-size) !important;
+  line-height: 1.45 !important;
+}
+
 /* -------------------------------------------------------------------------- */
 /* [EDIT 04] HEADING SETIAP SECTION                                           */
 /* -------------------------------------------------------------------------- */
@@ -156,6 +171,22 @@ DAFTAR BAGIAN:
 
 .section-head > p {
   font-size: var(--section-subtitle-size) !important;
+}
+
+.story > div:last-child > p:not(.eyebrow),
+.quality > div:last-child > p:not(.eyebrow),
+.timeline p {
+  font-size: var(--type-body-size) !important;
+  line-height: 1.7 !important;
+}
+
+.quality ul {
+  font-size: 15px !important;
+  line-height: 1.65 !important;
+}
+
+.cta small {
+  font-size: var(--type-label-size) !important;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -180,19 +211,60 @@ DAFTAR BAGIAN:
   font-weight: var(--card-number-weight) !important;
 }
 
+/* Angka dan ikon pada kartu Nilai di halaman Tentang */
+.value-grid article > span {
+  font-size: var(--card-number-size) !important;
+  font-weight: var(--card-number-weight) !important;
+}
+
+.value-grid article > b {
+  font-size: var(--card-icon-size) !important;
+}
+
 .service-grid article > b,
 .services-list article > div > b {
   font-size: var(--card-icon-size) !important;
 }
 
 .service-grid h3,
-.services-list h2 {
+.services-list h2,
+.value-grid h3 {
   font-size: var(--card-title-size) !important;
 }
 
 .service-grid p,
-.services-list p {
+.services-list p,
+.value-grid p {
   font-size: var(--card-description-size) !important;
+  line-height: 1.7 !important;
+}
+
+.services-list article > small,
+.capabilities span {
+  font-size: var(--type-label-size) !important;
+}
+
+.services-list ul,
+.capabilities small {
+  font-size: var(--type-small-size) !important;
+  line-height: 1.6 !important;
+}
+
+.process-grid span {
+  font-size: var(--type-label-size) !important;
+}
+
+.process-grid p {
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+}
+
+.expertise-index strong {
+  font-size: 18px !important;
+}
+
+.expertise-index small {
+  font-size: 13px !important;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -210,6 +282,11 @@ DAFTAR BAGIAN:
 
 .project-card p {
   font-size: var(--portfolio-description-size) !important;
+}
+
+.home-project > div:last-child span,
+.project-card > div:last-child span {
+  font-size: var(--type-small-size) !important;
 }
 
 .filters button {
@@ -235,16 +312,48 @@ DAFTAR BAGIAN:
   ) !important;
 }
 
-.case-hero-copy > p:not(.case-kicker),
-.case-story p {
-  font-size: var(--detail-body-size) !important;
+.case-hero-copy > p:not(.case-kicker) {
+  font-size: var(--detail-lead-size) !important;
+  line-height: 1.7 !important;
 }
 
+.case-story p {
+  font-size: var(--detail-body-size) !important;
+  line-height: 1.75 !important;
+}
+
+.case-back,
 .case-kicker,
 .case-meta span,
 .case-story h3,
 .case-next small {
   font-size: var(--detail-label-size) !important;
+}
+
+.case-back {
+  font-family: inherit !important;
+  line-height: 1.5 !important;
+}
+
+.case-meta strong {
+  font-size: var(--type-small-size) !important;
+  line-height: 1.5 !important;
+}
+
+.case-deliverables span,
+.expertise-tags span {
+  font-size: var(--detail-label-size) !important;
+  line-height: 1.45 !important;
+}
+
+.expertise-visual p {
+  font-size: var(--detail-label-size) !important;
+  line-height: 1.7 !important;
+}
+
+.case-next strong {
+  font-size: 24px !important;
+  line-height: 1.25 !important;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -269,6 +378,20 @@ DAFTAR BAGIAN:
   font-size: var(--contact-label-size) !important;
 }
 
+.contact-action strong,
+.contact-details strong,
+.contact-details a,
+.location-panel-foot strong {
+  font-size: var(--type-body-size) !important;
+}
+
+.visit-note p,
+.location-panel-foot p span,
+.location-panel-foot a {
+  font-size: var(--type-small-size) !important;
+  line-height: 1.6 !important;
+}
+
 /* -------------------------------------------------------------------------- */
 /* [EDIT 09] FOOTER                                                           */
 /* -------------------------------------------------------------------------- */
@@ -284,11 +407,21 @@ DAFTAR BAGIAN:
   font-size: var(--footer-body-size) !important;
 }
 
+.copyright {
+  font-size: var(--footer-title-size) !important;
+  line-height: 1.45 !important;
+}
+
 /* -------------------------------------------------------------------------- */
 /* [EDIT 10] UKURAN KHUSUS HP                                                 */
 /* -------------------------------------------------------------------------- */
 @media (max-width: 600px) {
   :root {
+    --type-label-size: 11px;
+    --type-small-size: 13px;
+    --type-body-size: 15px;
+    --type-lead-size: 16px;
+    --type-nav-size: 15px;
     --home-title-min: 40px;
     --home-title-max: 50px;
     --page-title-min: 38px;
