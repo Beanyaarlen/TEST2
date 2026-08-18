@@ -435,3 +435,307 @@ DAFTAR BAGIAN:
     --portfolio-title-size: 22px;
   }
 }
+
+/* ========================================================================== */
+/* REVISION 18-08-2026 — hero, about page, dan responsive visual              */
+/* ========================================================================== */
+
+/* Homepage: background hero benar-benar full-width dan hierarchy judul jelas. */
+.enterprise-hero {
+  width: 100%;
+  min-height: calc(100svh - 88px);
+}
+
+.enterprise-hero-inner {
+  width: 100% !important;
+  max-width: 1600px;
+  margin-inline: auto;
+}
+
+.enterprise-copy h1 {
+  max-width: 760px;
+}
+
+.enterprise-copy h1 .hero-title-primary,
+.enterprise-copy h1 .hero-title-secondary {
+  display: block;
+}
+
+.enterprise-copy h1 .hero-title-primary {
+  font-size: 1em;
+}
+
+.enterprise-copy h1 .hero-title-secondary {
+  margin-top: 7px;
+  font-size: .82em;
+  line-height: 1.02;
+  letter-spacing: -.045em;
+}
+
+.enterprise-copy > p {
+  max-width: 560px;
+  margin-top: 24px;
+}
+
+/* Satu CTA utama, dibuat lebih tegas dan mudah ditekan. */
+.enterprise-actions {
+  margin-top: 34px;
+}
+
+.pro-button-large {
+  min-width: 300px;
+  min-height: 68px;
+  padding-inline: 32px;
+  font-size: 15px !important;
+}
+
+.pro-button-large span {
+  font-size: 24px;
+}
+
+/* Visual kanan dibesarkan agar proporsinya stabil di layar laptop besar. */
+.corporate-book {
+  width: 330px;
+  height: 430px;
+  left: 5%;
+  bottom: 7%;
+  padding: 39px;
+}
+
+.corporate-book:before {
+  width: 150px;
+  height: 150px;
+}
+
+.corporate-book b {
+  font-size: 47px !important;
+  line-height: .84;
+}
+
+.corporate-box {
+  width: 255px;
+  height: 230px;
+  right: 5%;
+  top: 17%;
+  padding: 31px;
+}
+
+.corporate-box b {
+  font-size: 48px !important;
+}
+
+.color-proof {
+  width: 280px;
+  height: 102px;
+  right: 4%;
+  bottom: 8%;
+  padding: 21px;
+}
+
+/* About: hilangkan efek card/gutter berlebih; background section dibuat penuh. */
+.about-hero,
+.about-story {
+  width: 100% !important;
+  max-width: none !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: #fff;
+}
+
+.about-hero {
+  padding-left: max(58px, calc((100vw - 1360px) / 2 + 36px));
+  padding-right: max(58px, calc((100vw - 1360px) / 2 + 36px));
+}
+
+.about-story {
+  padding-left: max(72px, calc((100vw - 1320px) / 2 + 50px));
+  padding-right: max(72px, calc((100vw - 1320px) / 2 + 50px));
+  border-top: 1px solid rgba(16,35,42,.12);
+}
+
+/* Seal merah/magenta dan band statistik biru dihapus dari markup agar lebih clean. */
+
+@media (max-width: 1050px) and (min-width: 901px) {
+  .enterprise-copy h1 .hero-title-secondary {
+    font-size: .84em;
+  }
+
+  .corporate-book {
+    width: 275px;
+    height: 370px;
+  }
+
+  .corporate-book b {
+    font-size: 40px !important;
+  }
+
+  .corporate-box {
+    width: 210px;
+    height: 190px;
+  }
+
+  .corporate-box b {
+    font-size: 40px !important;
+  }
+
+  .color-proof {
+    width: 225px;
+    height: 86px;
+  }
+}
+
+@media (max-width: 900px) {
+  .enterprise-hero {
+    min-height: 0;
+  }
+
+  .enterprise-copy h1 {
+    max-width: 680px;
+  }
+
+  .enterprise-copy h1 .hero-title-secondary {
+    font-size: .8em;
+  }
+
+  .enterprise-visual {
+    min-height: 560px;
+  }
+
+  .corporate-book {
+    width: 290px;
+    height: 385px;
+    left: 12%;
+  }
+
+  .corporate-book b {
+    font-size: 41px !important;
+  }
+
+  .corporate-box {
+    width: 225px;
+    height: 200px;
+    right: 12%;
+  }
+
+  .corporate-box b {
+    font-size: 42px !important;
+  }
+
+  .color-proof {
+    width: 245px;
+    height: 90px;
+  }
+
+  .about-hero,
+  .about-story {
+    padding-left: 48px !important;
+    padding-right: 48px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .enterprise-copy {
+    padding: 42px 22px 38px !important;
+  }
+
+  .enterprise-copy h1 {
+    font-size: clamp(38px, 10.8vw, 44px) !important;
+    line-height: .96 !important;
+  }
+
+  .enterprise-copy h1 .hero-title-primary {
+    font-size: 1em;
+  }
+
+  .enterprise-copy h1 .hero-title-secondary {
+    margin-top: 8px;
+    font-size: .78em;
+    line-height: 1.03;
+  }
+
+  .enterprise-copy > p {
+    max-width: 330px;
+    margin-top: 20px;
+    font-size: 14px !important;
+    line-height: 1.62 !important;
+  }
+
+  .enterprise-actions {
+    margin-top: 27px;
+  }
+
+  .pro-button-large {
+    width: 100%;
+    min-height: 66px;
+    padding-inline: 28px;
+    font-size: 15px !important;
+  }
+
+  .enterprise-visual {
+    min-height: 470px;
+  }
+
+  .corporate-book {
+    width: 235px;
+    height: 320px;
+    left: 4%;
+    bottom: 11%;
+    padding: 29px;
+  }
+
+  .corporate-book:before {
+    width: 112px;
+    height: 112px;
+  }
+
+  .corporate-book b {
+    font-size: 34px !important;
+  }
+
+  .corporate-book small,
+  .corporate-book span {
+    font-size: 8px !important;
+  }
+
+  .corporate-box {
+    width: 185px;
+    height: 165px;
+    right: 3%;
+    top: 14%;
+    padding: 22px;
+  }
+
+  .corporate-box b {
+    font-size: 36px !important;
+  }
+
+  .corporate-box span {
+    font-size: 8px !important;
+  }
+
+  .color-proof {
+    width: 205px;
+    height: 78px;
+    right: 2%;
+    bottom: 7%;
+    padding: 16px;
+  }
+
+  .about-hero,
+  .about-story {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  .about-hero {
+    padding-top: 46px !important;
+    padding-bottom: 46px !important;
+  }
+
+  .about-story {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+}
