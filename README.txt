@@ -11,6 +11,7 @@ Isi folder:
 - services.html    : halaman layanan
 - portfolio.html   : halaman portofolio
 - project-*.html   : enam halaman studi kasus karya
+- expertise-*.html : enam halaman penjelasan lengkap keahlian
 - contact.html     : halaman kontak
 - assets/style.css : seluruh tampilan website
 - assets/script.js : menu mobile dan filter portofolio
@@ -26,5 +27,7 @@ CATATAN
 - Nama, alamat, telepon, statistik, dan karya masih merupakan contoh.
 - Halaman kontak hanya berisi informasi perusahaan dan tidak memiliki form pemesanan.
 - Setiap kartu portofolio membuka studi kasus dengan tantangan, pendekatan, hasil,
-  lingkup pekerjaan, dan tautan menuju proyek berikutnya.
+  lingkup pekerjaan, serta navigasi proyek sebelumnya dan berikutnya.
+- Halaman Keahlian terhubung ke penjelasan Offset Printing, Digital Printing,
+  Packaging, Large Format, Brand Activation, dan Creative Finishing.
 - Gambar social preview sudah tersedia sebagai assets/og-onda.png.
