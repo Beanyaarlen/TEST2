@@ -10,6 +10,7 @@ Isi folder:
 - about.html       : halaman tentang
 - services.html    : halaman layanan
 - portfolio.html   : halaman portofolio
+- project-*.html   : enam halaman studi kasus karya
 - contact.html     : halaman kontak
 - assets/style.css : seluruh tampilan website
 - assets/script.js : menu mobile dan filter portofolio
@@ -24,4 +25,6 @@ Jangan mengubah susunan folder assets.
 CATATAN
 - Nama, alamat, telepon, statistik, dan karya masih merupakan contoh.
 - Halaman kontak hanya berisi informasi perusahaan dan tidak memiliki form pemesanan.
+- Setiap kartu portofolio membuka studi kasus dengan tantangan, pendekatan, hasil,
+  lingkup pekerjaan, dan tautan menuju proyek berikutnya.
 - Gambar social preview sudah tersedia sebagai assets/og-onda.png.
